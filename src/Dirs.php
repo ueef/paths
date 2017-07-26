@@ -12,9 +12,6 @@ namespace Ueef\Paths {
     {
         const MODE = 0755;
 
-        const EXISTS = 1;
-        const CREATE = 2;
-
         /** @var string */
         private $root;
 
