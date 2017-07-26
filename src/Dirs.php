@@ -3,12 +3,12 @@
 namespace Ueef\Paths {
 
     use Throwable;
-    use Ueef\Paths\Interfaces\PathsInterface;
+    use Ueef\Paths\Interfaces\DirsInterface;
     use Ueef\Paths\Exceptions\UndefinedDirException;
     use Ueef\Paths\Exceptions\UndefinedRootException;
     use Ueef\Paths\Exceptions\CannotMakeDirException;
 
-    class Dirs implements PathsInterface
+    class Dirs implements DirsInterface
     {
         const MODE = 0755;
 
