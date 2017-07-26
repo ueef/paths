@@ -53,10 +53,6 @@ namespace Ueef\Paths {
 
         private function resolvePath($dir)
         {
-            if (!$this->root) {
-                throw new UndefinedRootException(['Root is undefined', $key]);
-            }
-
             return $this->root . $dir;
         }
 
