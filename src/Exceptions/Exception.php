@@ -1,18 +1,18 @@
 <?php
+declare(strict_types=1);
 
-namespace Ueef\Paths\Exceptions {
+namespace Ueef\Paths\Exceptions;
 
-    use Throwable;
+use Throwable;
 
-    class Exception extends \Exception
+class Exception extends \Exception
+{
+    public function __construct($message = "", $code = 0, Throwable $previous = null)
     {
-        public function __construct($message = "", $code = 0, Throwable $previous = null)
-        {
-            if (is_array($message)) {
-                $message = call_user_func_array('sprintf', $message);
-            }
-
-            parent::__construct($message, $code, $previous);
+        if (is_array($message)) {
+            $message = call_user_func_array('sprintf', $message);
         }
+
+        parent::__construct($message, $code, $previous);
     }
 }
